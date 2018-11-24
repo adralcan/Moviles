@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 212090769126741330}
   - component: {fileID: 50650349866828404}
   - component: {fileID: 58159945864781480}
+  - component: {fileID: 114579976313831352}
   m_Layer: 9
   m_Name: Bola
   m_TagString: Bola
@@ -93,6 +94,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.225
+--- !u!114 &114579976313831352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544987243481350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8f21bb21e38104d815a5f335182627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212090769126741330
 SpriteRenderer:
   m_ObjectHideFlags: 1
