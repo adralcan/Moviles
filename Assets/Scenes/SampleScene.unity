@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.451145, g: 0.49975836, b: 0.56766504, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -234,13 +234,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 170076733}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.2164396, y: 0, z: 0, w: 0.97629607}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
 --- !u!1 &282840810
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 813941963}
   - component: {fileID: 813941962}
   - component: {fileID: 813941961}
+  - component: {fileID: 813941965}
   m_Layer: 0
   m_Name: Recolector de pelotas
   m_TagString: Recogedor
@@ -416,6 +417,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &813941965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 813941960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937fb1cc6edf233449d22c9977a4a807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1112077900
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,9 +459,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10dd192f9887040469dff4375a476c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bolaPrefab: {fileID: 1544987243481350, guid: 39871c2bfd515984ea09b0e59b9ed14e, type: 2}
+  bolaPrefab: {fileID: 114067279285247034, guid: 39871c2bfd515984ea09b0e59b9ed14e,
+    type: 2}
   fuerza: 1000
-  contBolas: 5
+  contBolas: 40
+  bolasMax: 0
+  posicionFinal: {x: 0, y: 0, z: 0}
   grosorLinea: 0.2
 --- !u!4 &1112077902
 Transform:
@@ -472,7 +487,9 @@ TextMesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1112077900}
-  m_Text: 4
+  m_Text: '
+
+'
   m_OffsetZ: 0
   m_CharacterSize: 2
   m_LineSpacing: 1
@@ -641,12 +658,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed37a66518e36b4f9bf159791d219cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Disparador: {fileID: 1112077900}
-  Recolector: {fileID: 813941960}
+  Disparador: {fileID: 1112077901}
+  deadZone: {fileID: 813941965}
   muro: {fileID: 1670641751810724, guid: 6918ef8e23fbb0a46b2a7bc9042c64d2, type: 2}
-  bloque: {fileID: 1490572222889616, guid: 5d8ddb485c511974ea0a6ea6e883af37, type: 2}
-  distanciaX: 0.05
-  distanciaY: 0.06
+  bloque: {fileID: 114729712580748510, guid: 5d8ddb485c511974ea0a6ea6e883af37, type: 2}
+  listaBloques: []
+  distanciaX: 0.1
+  distanciaY: 0.08
+  contTemporal: 0
 --- !u!4 &1980507441
 Transform:
   m_ObjectHideFlags: 0
@@ -711,6 +730,17 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114429948874077362, guid: b0d7f5a1920efdb409b06c30c00d79f0,
+        type: 2}
+      propertyPath: contBolas
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114429948874077362, guid: b0d7f5a1920efdb409b06c30c00d79f0,
+        type: 2}
+      propertyPath: bolaPrefab
+      value: 
+      objectReference: {fileID: 114067279285247034, guid: 39871c2bfd515984ea09b0e59b9ed14e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0d7f5a1920efdb409b06c30c00d79f0, type: 2}
   m_IsPrefabAsset: 0

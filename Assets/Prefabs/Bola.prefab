@@ -23,7 +23,8 @@ Prefab:
       propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1544987243481350}
   m_IsPrefabAsset: 0
@@ -38,7 +39,7 @@ GameObject:
   - component: {fileID: 212090769126741330}
   - component: {fileID: 50650349866828404}
   - component: {fileID: 58159945864781480}
-  - component: {fileID: 114579976313831352}
+  - component: {fileID: 114067279285247034}
   m_Layer: 9
   m_Name: Bola
   m_TagString: Bola
@@ -94,7 +95,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.225
---- !u!114 &114579976313831352
+--- !u!114 &114067279285247034
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,9 +103,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1544987243481350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a8f21bb21e38104d815a5f335182627, type: 3}
+  m_Script: {fileID: 11500000, guid: b5ce4dcd0cf12e849b26b1cd6b55d784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocidad: 500
 --- !u!212 &212090769126741330
 SpriteRenderer:
   m_ObjectHideFlags: 1
